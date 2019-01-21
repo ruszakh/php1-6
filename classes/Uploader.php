@@ -11,9 +11,7 @@ class Uploader
 
     public function isUploaded()
     {
-        if (isset($_FILES[$this->formName])) {
-            return true;
-        }
+        return isset($_FILES[$this->formName]) && isset($_FILES[$this->formName]['tmp_name']);
     }
 
     public function upload()

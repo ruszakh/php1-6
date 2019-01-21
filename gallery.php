@@ -2,7 +2,7 @@
 
 session_start();
 
-include __DIR__ . '/functions/readImages.php';
+require_once __DIR__ . '/functions/readImages.php';
 
 $images = readImages();
 

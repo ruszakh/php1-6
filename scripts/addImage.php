@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '/../functions/checkUsers.php';
+require_once __DIR__ . '/../functions/checkUsers.php';
 
 require_once __DIR__ . '/../classes/Uploader.php';
 
@@ -17,7 +17,7 @@ if (null === getCurrentUser()) {
     <?php die;
 }
 
-if ((null === $uploader->isUploaded()) || (0 != $_FILES['picture']['error'])) {
+if ((false === $uploader->isUploaded()) || (0 != $_FILES['picture']['error'])) {
     ?>Некорректный запрос<br>
     <a href="/gallery.php">Назад</a>
     <?php die;
