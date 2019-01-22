@@ -28,4 +28,5 @@ function getCurrentUser() {
     if (isset($_SESSION['user']) && existsUser($_SESSION['user'])) {
         return $_SESSION['user'];
     }
+    return null;
 }

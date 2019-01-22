@@ -2,7 +2,7 @@
 
 class Uploader
 {
-    public $formName;
+    protected $formName;
 
     public function __construct($formName)
     {

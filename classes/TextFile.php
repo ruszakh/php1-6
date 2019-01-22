@@ -2,7 +2,7 @@
 
 class TextFile
 {
-    public $path;
+    protected $path;
 
     protected $data;
 
